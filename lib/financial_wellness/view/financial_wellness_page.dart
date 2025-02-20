@@ -28,13 +28,15 @@ class FinancialWellnessView extends StatelessWidget {
         builder: (context, state) {
           return const Padding(
             padding: EdgeInsets.all(24),
-            child: Column(
-              spacing: 36,
-              children: [
-                _FinancialWellnessHeader(),
-                _FinancialWellnessCalculator(),
-                _FinancialWellnessFooter(),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                spacing: 36,
+                children: [
+                  _FinancialWellnessHeader(),
+                  _FinancialWellnessCalculator(),
+                  _FinancialWellnessFooter(),
+                ],
+              ),
             ),
           );
         },
@@ -118,33 +120,38 @@ class _FinancialWellnessCalculator extends StatelessWidget {
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(8)),
         ),
-        child: Column(
-          children: [
-            Image.asset(
-              'assets/kalshilogo.png',
-              height: 48,
-            ),
-            const SizedBox(height: 16),
-            Text(
-              l10n.financialWellnessScore,
-              style: textTheme.displayLarge?.copyWith(
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 24),
+          child: Column(
+            children: [
+              Image.asset(
+                'assets/kalshilogo.png',
+                height: 48,
               ),
-            ),
-            Text(
-              l10n.enterYourFinancialInfo,
-              style: textTheme.displayLarge?.copyWith(
-                fontSize: 18,
-                color: KalshiColors.textSubtitle,
+              const SizedBox(height: 16),
+              Text(
+                l10n.financialWellnessTest,
+                style: textTheme.displayLarge?.copyWith(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: KalshiButton(text: l10n.continueText),
-            ),
-            const SizedBox(height: 16),
-          ],
+              Text(
+                l10n.enterYourFinancialInfo,
+                style: textTheme.displayLarge?.copyWith(
+                  fontSize: 18,
+                  color: KalshiColors.textSubtitle,
+                ),
+              ),
+              const SizedBox(height: 16),
+              KalshiInput(label: l10n.annualIncome),
+              const SizedBox(height: 16),
+              KalshiInput(label: l10n.annualIncome),
+              const SizedBox(height: 16),
+              KalshiButton(text: l10n.continueText),
+              const SizedBox(height: 16),
+            ],
+          ),
         ),
       ),
     );

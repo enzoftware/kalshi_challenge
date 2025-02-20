@@ -8,7 +8,7 @@
     "@letsFindOutYour": {
         "description": "Text for the first part of the financial wellness score message"
     },
-    "financialWellnessScore": "Financial wellness test",
+    "financialWellnessScore": "financial wellness score.",
     "@financialWellnessScore": {
         "description": "Text for the second part of the financial wellness score message"
     },

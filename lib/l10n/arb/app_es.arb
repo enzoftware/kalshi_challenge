@@ -8,7 +8,7 @@
     "@letsFindOutYour": {
         "description": "Texto para la primera parte del mensaje de puntaje de bienestar financiero"
     },
-    "financialWellnessScore": "Prueba de bienestar financiero",
+    "financialWellnessScore": "Puntaje de bienestar financiero.",
     "@financialWellnessScore": {
         "description": "Texto para la segunda parte del mensaje de puntaje de bienestar financiero"
     },
