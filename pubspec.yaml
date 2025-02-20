@@ -8,12 +8,17 @@ environment:
 
 dependencies:
   bloc: ^8.1.4
+  equatable: ^2.0.3
+  finance_repository:
+    path: packages/finance_repository
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.6
   flutter_localizations:
     sdk: flutter
   intl: ^0.19.0
+  kalshi_ui:
+    path: packages/kalshi_ui
 
 dev_dependencies:
   bloc_test: ^9.1.7
@@ -25,3 +30,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/

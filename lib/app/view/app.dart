@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kalshi_challenge/counter/counter.dart';
+import 'package:kalshi_challenge/financial_wellness/view/financial_wellness_page.dart';
 import 'package:kalshi_challenge/l10n/l10n.dart';
+import 'package:kalshi_ui/kalshi_ui.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -8,15 +9,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        appBarTheme: AppBarTheme(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        ),
-        useMaterial3: true,
-      ),
+      theme: KalshiTheme.theme,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: const FinancialWellnessPage(),
     );
   }
 }

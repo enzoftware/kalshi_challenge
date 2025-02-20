@@ -3,5 +3,73 @@
     "counterAppBarTitle": "Counter",
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
+    },
+    "letsFindOutYour": "Let's find out your",
+    "@letsFindOutYour": {
+        "description": "Text for the first part of the financial wellness score message"
+    },
+    "financialWellnessScore": "Financial wellness test",
+    "@financialWellnessScore": {
+        "description": "Text for the second part of the financial wellness score message"
+    },
+    "financialInfoSecure": "Your financial information is encrypted and secure. We'll never share or sell any of your personal data.",
+    "@financialInfoSecure": {
+        "description": "Text for the financial information security message"
+    },
+    "financialWellnessTest": "Financial wellness test",
+    "@financialWellnessTest": {
+        "description": "Title for the financial wellness test"
+    },
+    "enterYourFinancialInfo": "Enter your financial information below",
+    "@enterYourFinancialInfo": {
+        "description": "Prompt to enter financial information"
+    },
+    "annualIncome": "Annual income",
+    "@annualIncome": {
+        "description": "Label for annual income input field"
+    },
+    "monthlyCosts": "Monthly costs",
+    "@monthlyCosts": {
+        "description": "Label for monthly costs input field"
+    },
+    "continueText": "Continue",
+    "@continueText": {
+        "description": "Label for the continue button"
+    },
+    "congratulations": "Congratulations!",
+    "@congratulations": {
+        "description": "Message for congratulating the user"
+    },
+    "yourFinancialWellnessScoreIs": "Your financial wellness score is",
+    "@yourFinancialWellnessScoreIs": {
+        "description": "Message indicating the user's financial wellness score"
+    },
+    "healthy": "Healthy.",
+    "@healthy": {
+        "description": "Label indicating a healthy financial wellness score"
+    },
+    "returnText": "Return",
+    "@returnText": {
+        "description": "Label for the return button"
+    },
+    "roomForImprovement": "There is room for improvement.",
+    "@roomForImprovement": {
+        "description": "Message indicating there is room for improvement in the financial wellness score"
+    },
+    "average": "Average.",
+    "@average": {
+        "description": "Label indicating an average financial wellness score"
+    },
+    "unhealthy": "Unhealthy.",
+    "@unhealthy": {
+        "description": "Label indicating an unhealthy financial wellness score"
+    },
+    "caution": "Caution!",
+    "@caution": {
+        "description": "Message indicating caution"
+    },
+    "heresYour": "Here's your",
+    "@heresYour": {
+        "description": "Here is your message for header"
     }
 }
