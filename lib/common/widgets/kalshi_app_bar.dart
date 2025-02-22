@@ -5,8 +5,9 @@ class KalshiAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    const toolbarHeight = 80.0;
     return AppBar(
-      toolbarHeight: 80,
+      toolbarHeight: toolbarHeight,
       centerTitle: true,
       title: Image.asset('assets/kalshi.png', height: 20),
     );

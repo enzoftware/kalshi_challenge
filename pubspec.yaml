@@ -16,6 +16,7 @@ dependencies:
   flutter_bloc: ^8.1.6
   flutter_localizations:
     sdk: flutter
+  formz: ^0.8.0
   intl: ^0.19.0
   kalshi_ui:
     path: packages/kalshi_ui

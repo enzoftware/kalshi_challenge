@@ -9,7 +9,7 @@ class KalshiInput extends StatelessWidget {
     this.enabled = true,
   });
 
-  final VoidCallback? onChanged;
+  final ValueChanged<String>? onChanged;
   final String label;
   final bool enabled;
 
@@ -23,7 +23,7 @@ class KalshiInput extends StatelessWidget {
         TextFormField(
           enabled: enabled,
           keyboardType: TextInputType.number,
-          onChanged: (value) => onChanged?.call(),
+          onChanged: onChanged,
           style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontWeight: FontWeight.w700,
                 fontSize: 36,
