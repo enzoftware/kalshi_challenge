@@ -1,6 +1,6 @@
 import 'package:formz/formz.dart';
 
-enum FinancialInputValidationError { invalid, empty }
+enum FinancialInputValidationError { invalid, empty, zero }
 
 class FinancialInput extends FormzInput<String, FinancialInputValidationError> {
   const FinancialInput.pure() : super.pure('');
@@ -12,6 +12,7 @@ class FinancialInput extends FormzInput<String, FinancialInputValidationError> {
       return FinancialInputValidationError.empty;
     }
     final number = double.tryParse(value);
+    if (number == 0) return FinancialInputValidationError.zero;
     if (number == null || number <= 0) {
       return FinancialInputValidationError.invalid;
     }

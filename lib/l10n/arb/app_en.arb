@@ -71,5 +71,17 @@
     "heresYour": "Here's your",
     "@heresYour": {
         "description": "Here is your message for header"
+    },
+    "thisFieldIsRequired": "This field is required",
+    "@thisFieldIsRequired": {
+        "description": "Error message indicating the field is required"
+    },
+    "invalidValue": "Invalid value",
+    "@invalidValue": {
+        "description": "Error message indicating the value is invalid"
+    },
+    "valueShouldBeGreaterThanZero": "Value should be greater than zero",
+    "@valueShouldBeGreaterThanZero": {
+        "description": "Error message indicating the value should be greater than zero"
     }
 }

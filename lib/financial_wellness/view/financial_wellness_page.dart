@@ -2,6 +2,7 @@ import 'package:finance_repository/finance_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kalshi_challenge/common/common.dart';
+import 'package:kalshi_challenge/common/formz/formz.dart';
 import 'package:kalshi_challenge/financial_wellness/financial_wellness.dart';
 import 'package:kalshi_challenge/l10n/l10n.dart';
 import 'package:kalshi_ui/kalshi_ui.dart';
@@ -114,60 +115,75 @@ class _FinancialWellnessFooter extends StatelessWidget {
 }
 
 class _FinancialWellnessCalculator extends StatelessWidget {
-  const _FinancialWellnessCalculator();
+  _FinancialWellnessCalculator();
+
+  final _key = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     final textTheme = Theme.of(context).textTheme;
+    final annualIncomeInput = context.select(
+      (FinancialWellnessBloc bloc) => bloc.state.annualIconmeInput,
+    );
 
-    return Column(
-      children: [
-        const KalshiLogo(),
-        const SizedBox(height: 16),
-        Text(
-          l10n.financialWellnessTest,
-          style: textTheme.displayLarge?.copyWith(
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
+    final monthlyCostsInput = context.select(
+      (FinancialWellnessBloc bloc) => bloc.state.monthlyCostsInput,
+    );
+
+    return Form(
+      key: _key,
+      child: Column(
+        children: [
+          const KalshiLogo(),
+          const SizedBox(height: 16),
+          Text(
+            l10n.financialWellnessTest,
+            style: textTheme.displayLarge?.copyWith(
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
+            ),
           ),
-        ),
-        Text(
-          l10n.enterYourFinancialInfo,
-          style: textTheme.displayLarge?.copyWith(
-            fontSize: 18,
-            color: KalshiColors.textSubtitle,
+          Text(
+            l10n.enterYourFinancialInfo,
+            style: textTheme.displayLarge?.copyWith(
+              fontSize: 18,
+              color: KalshiColors.textSubtitle,
+            ),
           ),
-        ),
-        const SizedBox(height: 16),
-        KalshiInput(
-          label: l10n.annualIncome,
-          onChanged: (v) {
-            context.read<FinancialWellnessBloc>().add(
-                  FinancialWellnessAnnualIncomeChanged(v),
-                );
-          },
-        ),
-        const SizedBox(height: 16),
-        KalshiInput(
-          label: l10n.monthlyCosts,
-          onChanged: (value) {
-            context.read<FinancialWellnessBloc>().add(
-                  FinancialWellnessMonthlyCostsChanged(value),
-                );
-          },
-        ),
-        const SizedBox(height: 16),
-        KalshiButton(
-          text: l10n.continueText,
-          onPressed: () {
-            context.read<FinancialWellnessBloc>().add(
-                  const FinancialWellnessGetFinancialScore(),
-                );
-          },
-        ),
-        const SizedBox(height: 16),
-      ],
+          const SizedBox(height: 16),
+          KalshiInput(
+            label: l10n.annualIncome,
+            validator: (v) => annualIncomeInput.validator(v ?? '')?.text(l10n),
+            onChanged: (v) {
+              context.read<FinancialWellnessBloc>().add(
+                    FinancialWellnessAnnualIncomeChanged(v),
+                  );
+            },
+          ),
+          const SizedBox(height: 16),
+          KalshiInput(
+            label: l10n.monthlyCosts,
+            validator: (v) => monthlyCostsInput.validator(v ?? '')?.text(l10n),
+            onChanged: (value) {
+              context.read<FinancialWellnessBloc>().add(
+                    FinancialWellnessMonthlyCostsChanged(value),
+                  );
+            },
+          ),
+          const SizedBox(height: 16),
+          KalshiButton(
+            text: l10n.continueText,
+            onPressed: () {
+              if (!_key.currentState!.validate()) return;
+              context.read<FinancialWellnessBloc>().add(
+                    const FinancialWellnessGetFinancialScore(),
+                  );
+            },
+          ),
+          const SizedBox(height: 16),
+        ],
+      ),
     );
   }
 }
@@ -273,7 +289,7 @@ class _FinancialWellnessBody extends StatelessWidget {
                     return const _FinancialWellnessResult();
                   }
                   if (state == FinancialWellnessStatus.initial) {
-                    return const _FinancialWellnessCalculator();
+                    return _FinancialWellnessCalculator();
                   }
 
                   return const SizedBox.shrink();
@@ -307,5 +323,13 @@ extension FinancialWellnessScoreX on FinancialWellnessScore {
         FinancialScoreAverage() => l10n.average,
         FinancialScoreUnhealthy() => l10n.unhealthy,
         FinancialScoreUnknown() => '',
+      };
+}
+
+extension on FinancialInputValidationError {
+  String text(AppLocalizations l10n) => switch (this) {
+        FinancialInputValidationError.empty => l10n.thisFieldIsRequired,
+        FinancialInputValidationError.invalid => l10n.invalidValue,
+        FinancialInputValidationError.zero => l10n.valueShouldBeGreaterThanZero
       };
 }

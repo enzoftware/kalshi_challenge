@@ -71,5 +71,17 @@
     "heresYour": "Aquí esta tú",
     "@heresYour": {
         "description": "Aquí esta tú mensaje para la cabezera"
+    },
+    "thisFieldIsRequired": "Este campo es obligatorio",
+    "@thisFieldIsRequired": {
+        "description": "Mensaje de error que indica que el campo es obligatorio"
+    },
+    "invalidValue": "Valor inválido",
+    "@invalidValue": {
+        "description": "Mensaje de error que indica que el valor es inválido"
+    },
+    "valueShouldBeGreaterThanZero": "El valor debe ser mayor que cero",
+    "@valueShouldBeGreaterThanZero": {
+        "description": "Mensaje de error que indica que el valor debe ser mayor que cero"
     }
 }

@@ -7,11 +7,13 @@ class KalshiInput extends StatelessWidget {
     super.key,
     this.onChanged,
     this.enabled = true,
+    this.validator,
   });
 
   final ValueChanged<String>? onChanged;
   final String label;
   final bool enabled;
+  final String? Function(String?)? validator;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +23,7 @@ class KalshiInput extends StatelessWidget {
         Text(label, style: Theme.of(context).textTheme.bodyLarge),
         const SizedBox(height: 8),
         TextFormField(
+          validator: validator,
           enabled: enabled,
           keyboardType: TextInputType.number,
           onChanged: onChanged,
