@@ -36,9 +36,9 @@ class FinancialWellnessView extends StatelessWidget {
               child: Column(
                 spacing: 36,
                 children: [
-                  _FinancialWellnessHeader(),
-                  _FinancialWellnessBody(),
-                  _FinancialWellnessFooter(),
+                  FinancialWellnessHeader(),
+                  FinancialWellnessBody(),
+                  FinancialWellnessFooter(),
                 ],
               ),
             ),
@@ -49,8 +49,9 @@ class FinancialWellnessView extends StatelessWidget {
   }
 }
 
-class _FinancialWellnessHeader extends StatelessWidget {
-  const _FinancialWellnessHeader();
+@visibleForTesting
+class FinancialWellnessHeader extends StatelessWidget {
+  const FinancialWellnessHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -85,8 +86,9 @@ class _FinancialWellnessHeader extends StatelessWidget {
   }
 }
 
-class _FinancialWellnessFooter extends StatelessWidget {
-  const _FinancialWellnessFooter();
+@visibleForTesting
+class FinancialWellnessFooter extends StatelessWidget {
+  const FinancialWellnessFooter({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -114,8 +116,9 @@ class _FinancialWellnessFooter extends StatelessWidget {
   }
 }
 
-class _FinancialWellnessCalculator extends StatelessWidget {
-  _FinancialWellnessCalculator();
+@visibleForTesting
+class FinancialWellnessCalculator extends StatelessWidget {
+  FinancialWellnessCalculator({super.key});
 
   final _key = GlobalKey<FormState>();
 
@@ -188,8 +191,9 @@ class _FinancialWellnessCalculator extends StatelessWidget {
   }
 }
 
-class _FinancialWellnessResult extends StatelessWidget {
-  const _FinancialWellnessResult();
+@visibleForTesting
+class FinancialWellnessResult extends StatelessWidget {
+  const FinancialWellnessResult({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -258,8 +262,9 @@ class _FinancialWellnessResult extends StatelessWidget {
   }
 }
 
-class _FinancialWellnessBody extends StatelessWidget {
-  const _FinancialWellnessBody();
+@visibleForTesting
+class FinancialWellnessBody extends StatelessWidget {
+  const FinancialWellnessBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -287,10 +292,10 @@ class _FinancialWellnessBody extends StatelessWidget {
                     );
                   }
                   if (state == FinancialWellnessStatus.success) {
-                    return const _FinancialWellnessResult();
+                    return const FinancialWellnessResult();
                   }
                   if (state == FinancialWellnessStatus.initial) {
-                    return _FinancialWellnessCalculator();
+                    return FinancialWellnessCalculator();
                   }
 
                   return const SizedBox.shrink();
