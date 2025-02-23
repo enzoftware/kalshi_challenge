@@ -215,6 +215,7 @@ class _FinancialWellnessResult extends StatelessWidget {
             const SizedBox(height: 32),
             Text(
               message,
+              textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.displayLarge?.copyWith(
                     fontSize: 24,
                     fontWeight: FontWeight.w500,

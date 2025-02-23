@@ -11,11 +11,19 @@ class FinancialInput extends FormzInput<String, FinancialInputValidationError> {
     if (value.isEmpty) {
       return FinancialInputValidationError.empty;
     }
-    final number = double.tryParse(value);
+    final parseCurrency = value.parseCurrency;
+    final number = double.tryParse(parseCurrency);
     if (number == 0) return FinancialInputValidationError.zero;
     if (number == null || number <= 0) {
       return FinancialInputValidationError.invalid;
     }
     return null;
+  }
+}
+
+extension FinancialInputX on String {
+  String get parseCurrency {
+    final cleanedString = replaceAll(',', '');
+    return cleanedString;
   }
 }

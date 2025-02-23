@@ -31,7 +31,7 @@ class FinancialWellnessBloc
     FinancialWellnessAnnualIncomeChanged event,
     Emitter<FinancialWellnessState> emit,
   ) async {
-    final annualIncome = FinancialInput.dirty(event.annualIncome);
+    final annualIncome = FinancialInput.dirty(event.annualIncome.parseCurrency);
     emit(state.copyWith(annualIconmeInput: annualIncome));
   }
 
@@ -39,7 +39,7 @@ class FinancialWellnessBloc
     FinancialWellnessMonthlyCostsChanged event,
     Emitter<FinancialWellnessState> emit,
   ) async {
-    final monthlyCosts = FinancialInput.dirty(event.monthlyCosts);
+    final monthlyCosts = FinancialInput.dirty(event.monthlyCosts.parseCurrency);
     emit(state.copyWith(monthlyCostsInput: monthlyCosts));
   }
 
