@@ -51,7 +51,7 @@ kalshi_challenge/
 
 ## 🚀 Demo
 
-[Add a GIF or Screenshot of the app]
+![demo](./kalshi_demo.webm)
 
 
 ## 📦 Dependencies
