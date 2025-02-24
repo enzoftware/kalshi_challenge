@@ -25,18 +25,23 @@ class CurrencyInputFormatter extends TextInputFormatter {
     TextEditingValue oldValue,
     TextEditingValue newValue,
   ) {
-    if (newValue.text.isEmpty) {
-      return newValue.copyWith(text: '');
+    try {
+      if (newValue.text.isEmpty) {
+        return newValue.copyWith(text: '');
+      }
+
+      // Remove existing commas and reformat the number
+      final newText = _formatter.format(
+        int.tryParse(newValue.text.replaceAll(',', '')),
+      );
+
+      return newValue.copyWith(
+        text: newText,
+        selection: TextSelection.collapsed(offset: newText.length),
+      );
+    } catch (e) {
+      return newValue;
     }
-
-    // Remove existing commas and reformat the number
-    final newText =
-        _formatter.format(int.parse(newValue.text.replaceAll(',', '')));
-
-    return newValue.copyWith(
-      text: newText,
-      selection: TextSelection.collapsed(offset: newText.length),
-    );
   }
 }
 
