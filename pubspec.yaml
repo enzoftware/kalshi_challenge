@@ -7,13 +7,13 @@ environment:
   sdk: ^3.5.0
 
 dependencies:
-  bloc: ^8.1.4
+  bloc: ^9.0.0
   equatable: ^2.0.3
   finance_repository:
     path: packages/finance_repository
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.1.6
+  flutter_bloc: ^9.0.0
   flutter_localizations:
     sdk: flutter
   formz: ^0.8.0
@@ -22,7 +22,7 @@ dependencies:
     path: packages/kalshi_ui
 
 dev_dependencies:
-  bloc_test: ^9.1.7
+  bloc_test: ^10.0.0
   flutter_test:
     sdk: flutter
   mocktail: ^1.0.4
