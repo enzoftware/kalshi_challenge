@@ -24,6 +24,6 @@ class FinancialInput extends FormzInput<String, FinancialInputValidationError> {
 extension FinancialInputX on String {
   String get parseCurrency {
     final cleanedString = replaceAll(',', '');
-    return cleanedString;
+    return cleanedString.trim();
   }
 }
