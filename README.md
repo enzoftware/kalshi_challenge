@@ -51,7 +51,8 @@ kalshi_challenge/
 
 ## 🚀 Demo
 
-<img src="./kalshi_demo.webm" height="290" />
+
+https://jmp.sh/s/FtwJ9hIQpUV1BrhnNUoW
 
 
 ## 📦 Dependencies
