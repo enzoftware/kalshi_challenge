@@ -1,0 +1,35 @@
+name: kalshi_challenge
+description: A Very Good Project created by Very Good CLI.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  bloc: ^8.1.4
+  equatable: ^2.0.3
+  finance_repository:
+    path: packages/finance_repository
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  flutter_localizations:
+    sdk: flutter
+  formz: ^0.8.0
+  intl: ^0.19.0
+  kalshi_ui:
+    path: packages/kalshi_ui
+
+dev_dependencies:
+  bloc_test: ^9.1.7
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.4
+  very_good_analysis: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/

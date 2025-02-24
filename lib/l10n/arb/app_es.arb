@@ -1,0 +1,87 @@
+{
+    "@@locale": "es",
+    "counterAppBarTitle": "Contador",
+    "@counterAppBarTitle": {
+        "description": "Texto mostrado en la AppBar de la página del contador"
+    },
+    "letsFindOutYour": "Vamos a descubrir tu",
+    "@letsFindOutYour": {
+        "description": "Texto para la primera parte del mensaje de puntaje de bienestar financiero"
+    },
+    "financialWellnessScore": "Puntaje de bienestar financiero.",
+    "@financialWellnessScore": {
+        "description": "Texto para la segunda parte del mensaje de puntaje de bienestar financiero"
+    },
+    "financialInfoSecure": "Tu información financiera está encriptada y segura. Nunca compartiremos ni venderemos ninguno de tus datos personales.",
+    "@financialInfoSecure": {
+        "description": "Texto para el mensaje de seguridad de la información financiera"
+    },
+    "financialWellnessTest": "Prueba de bienestar financiero",
+    "@financialWellnessTest": {
+        "description": "Título para la prueba de bienestar financiero"
+    },
+    "enterYourFinancialInfo": "Ingrese su información financiera a continuación",
+    "@enterYourFinancialInfo": {
+        "description": "Indicación para ingresar información financiera"
+    },
+    "annualIncome": "Ingresos anuales",
+    "@annualIncome": {
+        "description": "Etiqueta para el campo de ingresos anuales"
+    },
+    "monthlyCosts": "Costos mensuales",
+    "@monthlyCosts": {
+        "description": "Etiqueta para el campo de costos mensuales"
+    },
+    "continueText": "Continuar",
+    "@continueText": {
+        "description": "Etiqueta para el botón de continuar"
+    },
+    "congratulations": "¡Felicidades!",
+    "@congratulations": {
+        "description": "Mensaje para felicitar al usuario"
+    },
+    "yourFinancialWellnessScoreIs": "Tu puntaje de bienestar financiero es",
+    "@yourFinancialWellnessScoreIs": {
+        "description": "Mensaje que indica el puntaje de bienestar financiero del usuario"
+    },
+    "healthy": "Saludable.",
+    "@healthy": {
+        "description": "Etiqueta que indica un puntaje de bienestar financiero saludable"
+    },
+    "returnText": "Regresar",
+    "@returnText": {
+        "description": "Etiqueta para el botón de regresar"
+    },
+    "roomForImprovement": "Hay margen de mejora.",
+    "@roomForImprovement": {
+        "description": "Mensaje que indica que hay margen de mejora en el puntaje de bienestar financiero"
+    },
+    "average": "Promedio.",
+    "@average": {
+        "description": "Etiqueta que indica un puntaje de bienestar financiero promedio"
+    },
+    "unhealthy": "No saludable.",
+    "@unhealthy": {
+        "description": "Etiqueta que indica un puntaje de bienestar financiero no saludable"
+    },
+    "caution": "¡Precaución!",
+    "@caution": {
+        "description": "Mensaje que indica precaución"
+    },
+    "heresYour": "Aquí esta tú",
+    "@heresYour": {
+        "description": "Aquí esta tú mensaje para la cabezera"
+    },
+    "thisFieldIsRequired": "Este campo es obligatorio",
+    "@thisFieldIsRequired": {
+        "description": "Mensaje de error que indica que el campo es obligatorio"
+    },
+    "invalidValue": "Valor inválido",
+    "@invalidValue": {
+        "description": "Mensaje de error que indica que el valor es inválido"
+    },
+    "valueShouldBeGreaterThanZero": "El valor debe ser mayor que cero",
+    "@valueShouldBeGreaterThanZero": {
+        "description": "Mensaje de error que indica que el valor debe ser mayor que cero"
+    }
+}
