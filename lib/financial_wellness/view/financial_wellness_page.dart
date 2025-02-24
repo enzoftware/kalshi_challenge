@@ -211,10 +211,9 @@ class FinancialWellnessResult extends StatelessWidget {
           children: [
             const KalshiLogo(),
             const SizedBox(height: 16),
-            Container(
-              width: double.infinity,
-              height: 16,
-              color: color,
+            FinancialProgressIndicator(
+              value: score.value,
+              progressColor: color,
             ),
             const SizedBox(height: 32),
             Text(

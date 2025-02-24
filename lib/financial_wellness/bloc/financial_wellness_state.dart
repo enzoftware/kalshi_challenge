@@ -41,21 +41,23 @@ class FinancialWellnessState extends Equatable {
 /// A sealed class representing the financial score.
 sealed class FinancialWellnessScore {
   /// Creates a new instance of [FinancialWellnessScore].
-  const FinancialWellnessScore();
+  const FinancialWellnessScore(this.value);
+
+  final int value;
 }
 
 class FinancialScoreHealthy extends FinancialWellnessScore {
-  const FinancialScoreHealthy();
+  const FinancialScoreHealthy() : super(2);
 }
 
 class FinancialScoreAverage extends FinancialWellnessScore {
-  const FinancialScoreAverage();
+  const FinancialScoreAverage() : super(1);
 }
 
 class FinancialScoreUnhealthy extends FinancialWellnessScore {
-  const FinancialScoreUnhealthy();
+  const FinancialScoreUnhealthy() : super(0);
 }
 
 class FinancialScoreUnknown extends FinancialWellnessScore {
-  const FinancialScoreUnknown();
+  const FinancialScoreUnknown() : super(-1);
 }
